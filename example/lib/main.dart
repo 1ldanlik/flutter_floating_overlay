@@ -18,12 +18,10 @@ void overlayMain() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   final url = await FlutterFloatingOverlay.getVideoUrl() ?? '';
-  // final url = '';
 
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: TrueCallerOverlay(),
       home: VideoPlayerComponent(path: url),
       // home: Container(
       //   color: Colors.red,
@@ -84,7 +82,7 @@ class _MyAppState extends State<MyApp> {
                     visibility: NotificationVisibility.visibilityPublic,
                     positionGravity: PositionGravity.none,
                     height: 500,
-                    width: 300,
+                    width: 500,
                   );
                 },
                 child: const Text("Show Overlay"),

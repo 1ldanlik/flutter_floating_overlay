@@ -29,21 +29,27 @@ class _VideoPlayerComponentState extends State<VideoPlayerComponent> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 150,
-      child: AspectRatio(
-        aspectRatio: _controller.value.aspectRatio,
-        child:
-        // Stack(
-        //   children: [
-            VideoPlayer(_controller),
-            // Center(
-            //     child: ResumeButton(
-            //   controller: _controller,
-            //   iconSize: 44,
-            // )),
-        //   ],
-        // ),
+    return Material(
+      color: Colors.transparent,
+      child: Center(
+        child: SizedBox(
+          width: 250,
+          // height: 200,
+          child: AspectRatio(
+            aspectRatio: _controller.value.aspectRatio,
+            child:
+            Stack(
+              children: [
+                VideoPlayer(_controller),
+                Center(
+                    child: ResumeButton(
+                  controller: _controller,
+                  iconSize: 44,
+                )),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
