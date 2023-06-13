@@ -1,12 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
 import 'package:flutter_floating_overlay/flutter_floating_overlay.dart';
 import 'package:flutter_floating_overlay_example/components/video_player_component.dart';
-import 'package:video_player/video_player.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
